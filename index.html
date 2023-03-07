@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  </head>
+  <body>
+    <center>
+    <h1 class="glyphicon glyphicon-hand-up">ASL Gestures</h1>
+    <p> Model generates these ASL gestures:
+        <span>&#x24C1;</span>
+        |
+        <span>&#x2463;</span>
+        |
+        <span>&#x24C7;</span>
+        |
+        <span>&#x1F44C;</span>
+        |
+        <span>&#x1F44D;</span>
+        |
+        <span>&#x270B;</span>
+        |
+        <span>&#x2462;</span>
+    </p>
+    <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate ASL gesture
+      	
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Webcam View - </label>
+        <div id="camera"></div>
+        <br><br>
+        <button class="glyphicon glyphicon-camera btn btn-danger" onclick="take_snapshot()">Capture Image</button>
+      </div>
+      
+      <label id="asl_gesture">The ASL Gesture is: </label>
+      <p class="gesture_name" id="result_gesture_name"></p>
+      <p class="emoji" id="update_gesture"></p>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check()" class="glyphicon glyphicon-check btn btn-success">Predict ASL Gesture</button>
+
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="asl.js"></script>
+
+  </body>
+</html>
+  </body>
